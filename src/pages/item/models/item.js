@@ -1,4 +1,7 @@
-import { queryHeroList, getHeroDetails } from '../../../services/api';
+import {
+  queryHeroList,
+  //  getHeroDetails
+} from '../../../services/api';
 
 export default {
   state: {
@@ -26,7 +29,7 @@ export default {
   effects: {
     *fetch({ type, payload }, { put, call, select }) {
       const herolist = yield call(queryHeroList);
-      const herodetails = yield call(getHeroDetails, { ename: 110 });
+      // const herodetails = yield call(getHeroDetails, { ename: 110 });
 
       yield put({
         type: 'save',
