@@ -23,7 +23,10 @@ export default {
         },
       },
     ],
+    'umi-plugin-gh-pages',
   ],
+  base: '/umi-hero/',
+  publicPath: '/umi-hero/',
   // proxy: {
   //   '/api': {
   //     target: 'https://pvp.qq.com/web201605/js/',
