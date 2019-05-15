@@ -1,5 +1,6 @@
 import { connect } from 'dva';
 import { Row, Col, Card, Radio } from 'antd';
+import FreeHeroItem from './components/FreeHeroItem';
 import styles from './index.less';
 
 const RadioGroup = Radio.Group;
@@ -15,9 +16,9 @@ const heroType = [
 ];
 
 function Hero(props) {
-  console.log('hero::: ', props);
-  const { hero, dispatch } = props;
-  const { heros = [], filterKey = 0 } = hero;
+  console.log('hero::: -props', props);
+  const { hero, dispatch, history } = props;
+  const { heros = [], filterKey = 0, freeheros = [], itemHover = 0 } = hero;
 
   const onChange = e => {
     console.log(e.target.value);
@@ -28,9 +29,43 @@ function Hero(props) {
       },
     });
   };
+  const onItemHover = index => {
+    dispatch({
+      type: 'hero/save',
+      payload: {
+        itemHover: index,
+      },
+    });
+  };
+
+  const onClickToDetails = ename => {
+    console.log(1000, ename);
+    history.push(`/herodetail/${ename}`);
+  };
 
   return (
     <div className={styles.normal}>
+      <div className={styles.info}>
+        <Row className={styles.freehero}>
+          <Col span={24}>
+            <p>周免英雄</p>
+            <div>
+              {freeheros.map((data, index) => {
+                return (
+                  <FreeHeroItem
+                    data={data}
+                    itemHover={itemHover}
+                    onItemHover={onItemHover}
+                    thisIndex={index}
+                    key={index}
+                    handleClick={onClickToDetails}
+                  />
+                );
+              })}
+            </div>
+          </Col>
+        </Row>
+      </div>
       <Card className={styles.radioPanel}>
         <RadioGroup onChange={onChange} value={filterKey}>
           {heroType.map(data => (

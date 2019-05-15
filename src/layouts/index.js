@@ -39,7 +39,7 @@ function BasicLayout(props) {
           {menuData.map(menu => {
             return (
               <Menu.Item key={`/${menu.route}`}>
-                <Link to={menu.route}>{menu.name}</Link>
+                <Link to={`/${menu.route}`}>{menu.name}</Link>
               </Menu.Item>
             );
           })}
