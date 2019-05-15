@@ -1,5 +1,7 @@
 // ref: https://umijs.org/config/
 export default {
+  base: '/umi-hero/',
+  publicPath: '/umi-hero/',
   treeShaking: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
@@ -25,8 +27,6 @@ export default {
     ],
     'umi-plugin-gh-pages',
   ],
-  base: '/umi-hero/',
-  publicPath: '/umi-hero/',
   // proxy: {
   //   '/api': {
   //     target: 'https://pvp.qq.com/web201605/js/',
