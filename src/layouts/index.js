@@ -18,6 +18,10 @@ const menuData = [
     route: 'summoner',
     name: '召唤师技能',
   },
+  {
+    route: 'useLayoutEffect',
+    name: 'useLayoutEffect',
+  },
 ];
 
 function BasicLayout(props) {

@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "antd": "^3.15.0",
+    "calculate-asmd": "^2.3.2",
     "dva": "^2.5.0-beta.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-listen-resize": "^0.1.2",
+    "react-scroll-down": "^0.1.5",
     "umi-plugin-gh-pages": "^0.1.0"
   },
   "devDependencies": {
