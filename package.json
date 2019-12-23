@@ -10,14 +10,15 @@
     "deploy": "yarn run build && gh-pages -d dist"
   },
   "dependencies": {
-    "antd": "^3.15.0",
+    "antd": "^3.26.4",
     "calculate-asmd": "^2.3.2",
     "dva": "^2.5.0-beta.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "postcss-write-svg": "^3.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-listen-resize": "^0.1.2",
     "react-scroll-down": "^0.1.5",
-    "umi-plugin-gh-pages": "^0.1.0"
+    "umi-plugin-gh-pages": "^0.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -27,12 +28,12 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.2.2",
-    "react-test-renderer": "^16.7.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "react-test-renderer": "^16.12.0",
     "safe-reaper": "^1.1.0",
-    "umi": "^2.6.3",
-    "umi-plugin-react": "^1.6.0"
+    "umi": "^2.12.7",
+    "umi-plugin-react": "^1.14.10"
   },
   "lint-staged": {
     "*.{js,jsx}": [

@@ -1,0 +1,33 @@
+.showDpr {
+  font-size: 1rem;
+  border-bottom: 1px solid red;
+}
+
+@svg 1px-border-LR {
+  width: 2px;
+  @rect {
+    fill: var(--color, black);
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@svg 1px-border-TB {
+  height: 2px;
+  @rect {
+    fill: var(--color, black);
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.showBorderWrapper {
+  margin-top: 0.15rem;
+  border: 1px solid transparent;
+  border-image: svg(1px-border-TB param(--color red)) 2 2 stretch;
+}
+
+/* .showBorder {
+  border: 1px solid transparent;
+  border-image: svg(1px-border-LR param(--color red)) 2 2 stretch;
+} */

@@ -1,3 +1,5 @@
+import postcssWriteSvg from 'postcss-write-svg';
+
 // ref: https://umijs.org/config/
 export default {
   base: '/umi-hero/',
@@ -27,6 +29,12 @@ export default {
     ],
     'umi-plugin-gh-pages',
   ],
+  extraPostCSSPlugins: [
+    postcssWriteSvg({
+      utf8: false,
+    }),
+  ],
+
   // proxy: {
   //   '/api': {
   //     target: 'https://pvp.qq.com/web201605/js/',

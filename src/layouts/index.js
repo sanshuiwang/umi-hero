@@ -22,6 +22,10 @@ const menuData = [
     route: 'useLayoutEffect',
     name: 'useLayoutEffect',
   },
+  {
+    route: 'rem-hooks',
+    name: 'rem-hooks',
+  },
 ];
 
 function BasicLayout(props) {
